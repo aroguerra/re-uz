@@ -1,3 +1,15 @@
-<% @products.each do |p| %>
-<%= p.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+  <% @products.each do |p| %>
+    <div class="col-12 col-lg-6 col-md-6">
+      <div class="card-product">
+      <%= image_tag(p.photo)%>
+      <div class="card-product-infos">
+        <h2><%=p.name%></h2>
+        <p>quality:<%=p.quality%><strong>Value:<%= p.value %>€</strong> </p>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
